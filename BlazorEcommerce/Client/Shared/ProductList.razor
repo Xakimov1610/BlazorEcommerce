@@ -1,0 +1,51 @@
+﻿<ul class="list-unstyled">
+    @foreach (var product in Products)
+    {
+        <li class="media my-3">
+            <div class="media-img-wrapper mr-2">
+                <a herf="#">
+                    <img class="media-img" src="@product.ImageUrl" alt="@product.Title">
+                </a>
+            </div>
+            <div class="media-body">
+                <a herf="#">
+                    <h4 class="mb-0">@product.Title</h4>
+                </a>
+                <p>@product.Description</p>
+                <h5 class="price">
+                    $@product.Price
+                </h5>
+            </div>
+        </li>
+    }
+</ul>
+
+@code {
+    private static List<Product> Products = new List<Product>
+    {
+        new Product
+        {
+            Id = 1,
+            Title = "ADIDAS RETROPY E5",
+            Description = "Vada qilinganidek Sizlarga Retropy E5'larning yangi ranglarini birinchi bo'lib havola etamiz. Tez oradi yana yangi ranglari chiqayotgani haqidagi ishonchli ma'lumotlar ham bizga kelib tushdi. Biz bilan bo'ling, birinchi bo'ling!",
+            ImageUrl = "https://assets.adidas.com/images/w_600,f_auto,q_auto/24c46272a21643d39f93ad7a011547a3_9366/Retropy_E5_Shoes_Grey_GZ4259_01_standard.jpg",
+            Price = 149
+        },
+        new Product
+        {
+            Id = 1,
+            Title = "ADIDAS TERREX EDITION",
+            Description = "Ushbu krossovkalarini kiyib tog'larga, dengizlarga, umuman tabiat qo'yniga bemalol otlanishingiz mumkin! Ularda suvda bemalol yursangiz bo'ladi, sababi ushbu Terrex'larni tag qisimlari chiroyli ko'rinishda havo va suv o'tqizuvchan qilib ishlab chiqarilgan.",
+            ImageUrl = "https://telegra.ph/file/0fb4db4515afcc94bedc2.png",
+            Price = 89
+        },
+        new Product
+        {
+            Id = 1,
+            Title = "NEW BALANCE XC72",
+            Description = "Yangi, eksklusiv ranglarmi? Marhamat! Doimgidek bizda ularni birinchi bo'lib ko'rishingiz mumkin. NB doimgidek krossovkalariga rang tanlashni yomon qigan. E'tiborlisi, materiallari ham doim boshqacha va judayam sifatli.",
+            ImageUrl = "https://sneakerbardetroit.com/wp-content/uploads/2021/08/New-Balance-XC-72-UXC72BC3-Release-Date-1-1068x749.jpg",
+            Price = 179
+        },
+    };
+}
